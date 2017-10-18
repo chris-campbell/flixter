@@ -10,9 +10,15 @@
   </div>
   
   <ul>
-    <% @course.sections.each do |section| %>
-      <li>
-        <%= section.title %>
+          <% section.lessons.each do |lesson| %>
+            <li>
+              <b><%= lesson.title %></b>
+              -
+              <%= lesson.subtitle %>
+            </li>
+          <% end %>
+        </ul>
+        <br class="clr" />
       </li>
     <% end %>
   </ul>
