@@ -2,7 +2,7 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
-  <% if @course.image.empty? %>
+  <% if @course.image.nil? %>
     <%= image_tag 'default.png' %>
   <% else %>
     <%= image_tag @course.image, class: 'img-fluid' %>
