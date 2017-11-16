@@ -2,7 +2,6 @@
   $(function() {
     $('.sections').sortable({
       update: function( event, ui ) {
-console.log(ui.item.data('update-url'));
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
