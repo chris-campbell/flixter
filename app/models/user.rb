@@ -6,9 +6,14 @@ class User < ApplicationRecord
          
   has_many :courses
   has_many :enrollments
+  has_many :enrolled_courses, through: :enrollments, source: :course
   
   def enrolled_in?(course)
-    enrolled_courses = enrollments.collect(&:course)
+    enrolled_courses = []
+    enrollments.each do |enrollment|
+      enrolled_courses << enrollment.course
+    end
+
     return enrolled_courses.include?(course)
   end
   
