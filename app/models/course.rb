@@ -9,10 +9,14 @@ class Course < ApplicationRecord
     
     
     def free?
-        cost.zero?
+      cost.zero?
     end
     
     def premium?
-        !free?
+      !free?
+    end
+    
+    def self.search(term)
+      where("title LIKE ? OR description LIKE ?", "%#{term}%", "%#{term}%")
     end
 end

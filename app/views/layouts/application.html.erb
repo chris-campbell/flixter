@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
   </head>
 
   <body>
@@ -18,14 +19,14 @@
     <footer>
       <div class='container'>
 <div class="row">
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-3 splash-description">
         <b>Teachers</b>
         <br />
         <%= link_to 'Teach a Course', new_instructor_course_path %>
         <br />
         <%= link_to 'My Dashboard', dashboard_path %>
       </div>
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-3 splash-description">
         <b>About</b>
         <br />
         <%= link_to 'Team', '#' %>
@@ -34,14 +35,18 @@
         <br />
         <%= link_to 'Privacy Policy', privacy_path %>
       </div>
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-3 splash-description">
         <b>Contact</b>
         <br />
-        christopher.campbell@outlook.com
-        <br />
-        Brooklyn, NY, 11234
+        <span>
+            StatsQ
+          <br />
+            statsq@support.com
+          <br>
+            Brooklyn, NY, 11234
+        </span>
       </div>
-      <div class="col-12 col-sm-3 social">
+      <div class="col-12 col-sm-3 social splash-description">
         <b>Social</b>
         <br />
         <br />
