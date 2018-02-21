@@ -77,11 +77,12 @@ ul .header .fa {
   margin: 10px;
 }
 
-.lesson {
-  background-color: black;
-  margin-top: 10px;
-  height: 130px;
-}
+// .lesson {
+//     background-color: #f98045;
+//     margin-top: 10px;
+//     height: 66px;
+//     border-radius: 15px;
+// }
 
 .lesson a {
   color: white;
@@ -92,13 +93,16 @@ ul .header .fa {
 
 .lesson a b {
   font-weight: 100;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .section {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 20px;
+  width: 57%;
+  margin-bottom: 6px !important;
+
 }
 
 .clr {
@@ -294,6 +298,133 @@ input[type=text] {
 }
 
 
-.vjs-big-play-centered {
-  width: 200px;
+.course-info {
+  float: right;
+  border: 0.5px solid lightgrey;
+  padding: 10px;
+  margin-top: 71px;
+  position: fixed;
+  top: 150px;
+  bottom: 300px;
+  right: 97px;
+  width: 23%;
+  height: 435px;
+}
+
+.booyah-box .course-info img {
+  width: 288.16px;
+  height: 216.11px;
+}
+
+.stripe-button-el {
+  width: 400%;
+  height: 40px;
+}
+
+.course-description {
+  background: #29303B;
+  padding: 98px;
+  width: 100%;
+  height: 300px;
+  color: #fff;
+}
+
+.description {
+  width: 65%;
+  line-height: 1.6;
+  font-size: 21px;
+}
+
+.course-info img {
+  border-style: none;
+  width: 106%;
+  position: relative;
+  right: 9px;
+  bottom: 10px;
+}
+
+.lesson-title {
+  border: 1px solid lightgrey;
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  border-radius: 2px;
+
+}
+
+.lesson-title .lesson-link {
+  margin-top: 10px;
+  position: relative;
+  top: 10px;
+  left: 17px;
+  font-size: 0.8em;
+  color: #576574;
+}
+
+.ui-accordion { 
+  width: 50%;
+}
+
+.section .ui-accordion {
+  height: 40px;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0 !important;
+  height: auto !important;
+  border-top: 0;
+  overflow: auto;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin: 2px 0 0 0;
+  padding: .5em .5em .5em .7em;
+  background: #57606f;
+  border: none;
+  font-size: 0.8em !important;
+  height: 45px;
+  color: #fff;
+}
+
+.curriculum {
+  margin-left: 100px;
+}
+
+.stripe-button-el {
+  width: 150px;
+}
+
+.action-btn {
+  width: 100%;
+}
+
+.section-title {
+  margin-top: 5px;
+  padding-top: 16px !important;
+  color: #fff;
+}
+
+
+.admin-btn {
+  float: left; 
+}
+
+
+.stripe-button {
+  float: left;
+  position: relative;
+  top: 10px;
+}
+
+.dashboard-link {
+  position: relative;
+  top: 9px;
+  font-size: 16px;
+}
+
+.dashboard-link a {
+  color: #f98045;
 }

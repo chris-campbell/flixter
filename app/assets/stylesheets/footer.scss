@@ -17,7 +17,7 @@ footer {
     position: relative;
     width: 100%;
     min-height: 100px;
-    background-color: rgba(36, 32, 33, 0.9);
+    background-color: #29303B;
     font-family: "Helvetica Neue", Helvetica;
     color: #fff;
     margin-top: 10px;
@@ -69,3 +69,10 @@ footer .fa-github-square {
   white-space: nowrap;
 }
 
+.curriculum {
+  margin-left: 60px;
+}
+
+.curriculum h2 {
+  margin: 40px 0 10px 0;
+}

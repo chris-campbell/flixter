@@ -1,15 +1,23 @@
-<br />
-
-<div class="booyah-box col-10 offset-1">
+<div class="course-description">
   <h1><%= @course.title %></h1>
-  <% if @course.image.nil? %>
+  <div class="description">
+    <%= @course.description %>
+    <br>
+    <span>Created by <%= @course.user.email %></span>
+  </div>
+</div>
+<!-- Course description ^^ -->
+
+<!-- Course info -->
+<div class='course-info'>
+  <% if @course.image.nil? || @course.image.empty? %>
     <%= image_tag 'default.png' %>
   <% else %>
-    <%= image_tag @course.image, class: 'img-fluid' %>
+    <%= image_tag @course.image, class: 'img-fluid course-img' %>
   <% end %>
   <br>
   <div class="row">
-    <div class="col-sm-4 col-12">
+    <div class="action-btn">
       <span class="badge badge-default">
         <%= number_to_currency @course.cost %>
       </span>
@@ -17,11 +25,9 @@
       <% if current_user && current_user == @course.user %>
         <br />
         <br />
-        <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+        <%= link_to 'Administer', instructor_course_path(@course), class: 'admin-btn btn btn-danger btn-large' %>
       <% end %>
       
-      <br />
-      <br />
      <% if current_user %>
       <% if current_user.enrolled_in?(@course) %>
         <h3 class="badge badge-info">You Are Enrolled!</h3>
@@ -31,11 +37,12 @@
     <% else %>
       <%= form_tag course_enrollments_path(@course) do %>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                data-email="<%= current_user.email %>"
-                data-description="<%= @course.title %> (<%= number_to_currency @course.cost %>)"
-                data-amount="<%= (@course.cost * 100).to_i %>"
-                data-locale="auto"></script>
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-email="<%= current_user.email %>"
+          data-description="<%= @course.title %> (<%= number_to_currency @course.cost %>)"
+          data-amount="<%= (@course.cost * 100).to_i %>"
+          data-locale="auto">
+        </script>
       <% end %>
     <% end %>
   <% end %>
@@ -43,33 +50,27 @@
     <h3 class="badge badge-info">Sign In to Enroll!</h3>
   <% end %>    
     </div>
-
-    <div class="col-sm-8 col-12">
-      <%= @course.description %>
-    </div>
+    <br>
+    <br>
+    <br>
   </div>
+</div>
+<!-- Course info end -->
 
-  <div class="col-12">
-    <% @course.sections.each do |section| %>
-      <div class="section">
-        <h3>
-          <%= section.title %>
-        </h3>
-        <div class="row">
+<div class="curriculum ">
+  
+  <h2>Curriculum For This Course</h2>
+  <% @course.sections.each do |section| %>
+    <div class="section">
+      <h3 class='section-title'><%= section.title %></h3>
+        <div>
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <div class="col-12 col-sm-6">
-              <div class="lesson text-center">
-                <%= link_to lesson_path(lesson) do %>
-                  <b><%= lesson.title %></b>
-                  <br />
-                  <%= lesson.subtitle %>
-                <% end %>
-              </div>
+            <div class='lesson-title'>
+              <%= link_to lesson.title, lesson_path(lesson), class: 'lesson-link' %>
             </div>
-          <% end %>
+          <% end %><!-- lesson end -->
         </div>
-        <br class="clr" />
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %><!-- section end -->
+  
 </div>
