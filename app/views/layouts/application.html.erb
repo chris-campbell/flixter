@@ -6,10 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link href="https://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
   </head>
 
   <body>
@@ -18,49 +23,49 @@
        <%= render 'shared/alert' %>
        <%= yield %>
     </div>
-    <footer>
-      <div class='container'>
-<div class="row">
-      <div class="col-12 col-sm-3 splash-description">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
-        <br />
-        <%= link_to 'My Dashboard', dashboard_path %>
-      </div>
-      <div class="col-12 col-sm-3 splash-description">
-        <b>About</b>
-        <br />
-        <%= link_to 'Team', '#' %>
-        <br />
-        <%= link_to 'Careers', '#' %>
-        <br />
-        <%= link_to 'Privacy Policy', privacy_path %>
-      </div>
-      <div class="col-12 col-sm-3 splash-description">
-        <b>Contact</b>
-        <br />
-        <span>
-            StatsQ
+  <footer>
+    <div class='container'>
+      <div class="row">
+        <div class="col-12 col-sm-3 footer-content">
+          <b>Teachers</b>
           <br />
-            statsq@support.com
+          <%= link_to 'Teach a Course', new_instructor_course_path %>
+          <br />
+          <%= link_to 'My Dashboard', dashboard_path %>
+        </div>
+        <div class="col-12 col-sm-3 footer-content">
+          <b>About</b>
+          <br />
+          <%= link_to 'Team', '#' %>
+          <br />
+          <%= link_to 'Careers', '#' %>
+          <br />
+          <%= link_to 'Privacy Policy', privacy_path %>
+        </div>
+        <div class="col-12 col-sm-3 footer-content">
+          <b>Contact</b>
+          <br />
+          <span>
+          StatsQ
+          <br />
+          statsq@support.com
           <br>
-            Brooklyn, NY, 11234
-        </span>
-      </div>
-      <div class="col-12 col-sm-3 social splash-description">
-        <b>Social</b>
-        <br />
-        <br />
-        <%= link_to 'https://github.com/chris-campbell' do %>
+          Brooklyn, NY, 11234
+          </span>
+        </div>
+        <div class="col-12 col-sm-3 social footer-content">
+          <b>Social</b>
+          <br />
+          <br />
+          <%= link_to 'https://github.com/chris-campbell' do %>
           <span class="fa fa-github-square fa-2x social-button"></span>
-        <% end %>
-        <span class="fa fa-facebook-square fa-2x social-button"></span>
-        <span class="fa fa-twitter-square fa-2x social-button"></span>
+          <% end %>
+          <span class="fa fa-facebook-square fa-2x social-button"></span>
+          <span class="fa fa-twitter-square fa-2x social-button"></span>
+        </div>
       </div>
     </div>
-      </div>
-    </footer>
+</footer>
     <script src="https://vjs.zencdn.net/5.12.6/video.js"></script>
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>

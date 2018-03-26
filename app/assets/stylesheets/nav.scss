@@ -1,0 +1,35 @@
+.mobile-nav {
+  display: inline-block;
+  position: absolute;
+  left: 3200px;
+}
+
+.bar {
+  background: #515151;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  height: 5px;
+  width: 38px;
+}
+
+@media (max-width: 469px) {
+  
+  .main-nav-links {
+    position: absolute;
+    left: 3200px;
+  }
+  
+  .mobile-nav {
+    display: inline-block;
+    /* background: #000; */
+    margin-bottom: 5px;
+    /* border-radius: 15px; */
+    height: 36px;
+    width: 53px;
+    position: relative;
+    float: right;
+    left: 0;
+    top: 27px;
+    margin-right: 18px;
+  }
+}

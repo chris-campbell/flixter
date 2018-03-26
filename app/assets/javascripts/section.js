@@ -1,5 +1,9 @@
 $(function() {
+  
     $(".section").accordion({
-      collapsible: true
+      collapsible: true,
+      animate: 300,
     });
+    
+    
 });

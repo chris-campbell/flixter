@@ -20,7 +20,6 @@ footer {
     background-color: #29303B;
     font-family: "Helvetica Neue", Helvetica;
     color: #fff;
-    margin-top: 10px;
 }
 
 footer b {
@@ -52,10 +51,11 @@ footer .fa-github-square {
 
 .all-courses {
   position: relative;
-  top: 12px;
+  top: 14px;
   left: 6px;
   font-size: 14px;
   color: #F97F51;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -75,4 +75,8 @@ footer .fa-github-square {
 
 .curriculum h2 {
   margin: 40px 0 10px 0;
+}
+
+.footer-content {
+  padding: 10px;
 }

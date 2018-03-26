@@ -1,40 +1,39 @@
 <!-- page hero start -->
 <section class='hero'>
-    <div class="search-form">
-      <span class='mission'>The only thing that's real is time</span>
-      <i class="fa .fa-search"></i>
-      <%= form_tag courses_path, method: :get do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Find a course today.." %>
-        <% submit_tag 'Search', :name => nil %>
-      <% end %>
-    </div>
+  <div class='search-form'>
+    <i class="fa .fa-search"></i>
+    <%= form_tag courses_path, method: :get do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Find a course today.." %>
+      <% submit_tag 'Search', :name => nil %>
+    <% end %>
+  </div>
 </section>
 <!-- page hero end -->
 
-<section class='content-section'>
-  <div class="row feature text-center">
-    <div class="col-12 col-sm description-box">
-      <i class="fa fa-book"></i>
-      <h3>Amazing Courses</h3>
-      <br />
-      <p class='splash-description'>
-        Finding a course couldn't be easier. Choose from any number of courses
-        to study with amazing teachers. 
-      </p>
-    </div>
+<!--<section class='content-section'>-->
+<!--  <div class="row feature text-center">-->
+<!--    <div class="col-12 col-sm description-box">-->
+<!--      <i class="fa fa-book"></i>-->
+<!--      <h3>Amazing Courses</h3>-->
+<!--      <br />-->
+<!--      <p class='splash-description'>-->
+<!--        Finding a course couldn't be easier. Choose from any number of courses-->
+<!--        to study with amazing teachers. -->
+<!--      </p>-->
+<!--    </div>-->
   
-    <div class="col-12 col-sm description-box">
-      <i class="fa fa-space-shuttle"></i>
-      <h3>Learn At Your Own Pace</h3>
-      <br />
-      <p class='splash-description'>Enroll and access a courses archive of lessons.</p>
-    </div>
+<!--    <div class="col-12 col-sm description-box middle">-->
+<!--      <i class="fa fa-space-shuttle"></i>-->
+<!--      <h3>Learn At Your Own Pace</h3>-->
+<!--      <br />-->
+<!--      <p class='splash-description'>Enroll and access a courses archive of lessons.</p>-->
+<!--    </div>-->
   
-    <div class="col-12 col-sm description-box">
-      <i class="fa fa-comments"></i>
-      <h3>Join our Community</h3>
-      <br />
-      <p class='splash-description'>Learn with a community of like-minded individuals.</p>
-    </div>
-  </div>
-</section>
+<!--    <div class="col-12 col-sm description-box">-->
+<!--      <i class="fa fa-comments"></i>-->
+<!--      <h3>Join our Community</h3>-->
+<!--      <br />-->
+<!--      <p class='splash-description'>Learn with a community of like-minded individuals.</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->

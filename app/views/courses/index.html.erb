@@ -1,35 +1,29 @@
-<br />
-
-<div class="booyah-box col-10 offset-1">
-  <h1 class="text-center">Learn something today</h1>
-  <hr>
-  
+<h1 class="text-center">Learn something today</h1>
+<div class="booyah-box">
   <% @courses.each do |course| %>
     <div class='course-item'>
       <ul>
         <li>
-          <h2 class='text-center'><%= link_to course.title, course_path(course), class: 'course-title' %></h2>
+          <h2 class='text-center course-title'><%= link_to course.title, course_path(course), class: 'course-title' %></h2>
         </li>
       </ul>
-          <br>
-          <br>
-          <% if course.image.nil? || course.image.empty? %>
-            <%= image_tag 'default.png', class: 'course-img' %>
-          <% else %>
-            <%= image_tag course.image, class: 'img-fluid' %>
-          <% end %>
-          <div class='row'>
-            <div class="col-sm-8 col-12">
+      <br>
+          <div class='course-description'>
+            <% if course.image.nil? || course.image.empty? %>
+              <%= image_tag 'default.png', class: 'course-img' %>
+            <% else %>
+              <%= image_tag course.image, class: 'img-fluid' %>
+            <% end %>
+          </div>
+        <div class='row'>
+            <div class="col-sm-8 col-12 description">
                 <%= course.description %>
-            </div>
-            
-              <div class="col-sm-4 col-12 text-center">
+              <div class="col-sm-4 col-12 text-center cost-sec">
                   <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large' %>
                   <br>
                   <b><%= course.cost %></b>
               </div>
           </div>
-      <br class='clr'>
-    </div>
+        </div>
+      </div>
   <% end %>
-</div>
