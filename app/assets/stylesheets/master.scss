@@ -1,8 +1,16 @@
 @import "bootstrap";
 @import "font-awesome";
 
-body {
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
@@ -22,25 +30,13 @@ ul .header .fa {
   font-size: 1.250em;
 }
 
-.navbar {
-    font-family: "Helvetica Neue", Helvetica;
-    font-weight: 200;
-    background-color: rgba(0, 0, 0, 0.0);
-}
-
-.navbar-inverse a.navbar-brand {
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
-  color: #fff;
-}
-
 .hero {
     background:linear-gradient(-90deg,rgba(0,0,0,1.3),rgba(255,255,255,0.3)),url('hero.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 75vh;
+    height: 81vh;
     position: relative;
     display: block;
 }
@@ -66,37 +62,6 @@ ul .header .fa {
   margin: 0.625em;
 }
 
-.right {
-  float: right;
-}
-
-.help-block {
-  color: #ff3333;
-  background-color: #FFEEEE;
-  border-radius: 0.188em;
-  padding: 0.125em 0.500em 0.125em 0.500em ;
-  margin: 0.625em;
-}
-
-// .lesson {
-//     background-color: #f98045;
-//     margin-top: 10px;
-//     height: 66px;
-//     border-radius: 15px;
-// }
-
-.lesson a {
-  color: white;
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
-  font-size: 0.938em;
-}
-
-.lesson a b {
-  font-weight: 100;
-  font-size: 1.125em;
-}
-
 .section {
   border: 0.063em solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
@@ -107,6 +72,7 @@ ul .header .fa {
 }
 
 .clr {
+  
   clear: both;
 }
 
@@ -153,11 +119,6 @@ ul .header .fa {
   font-size: 1.250em;
 }
 
-.course_image {
-  width: 20%;
-  height: 6.250em;
-}
-
 #footer {
   position: relative;
   width: 100%;
@@ -190,14 +151,6 @@ ul .header .fa {
   font-size: 1.2em;
 }
 
-input[type=text] {
-  // padding-left: 0.813em;
-  // font-family: "Helvetica Neue", Helvetica;
-  // font-size: 1.125em;
-  // color: #576574;
-  // margin: 0 auto;
-}
-
 ::placeholder {
   position: relative;
   bottom: 2px;
@@ -205,19 +158,8 @@ input[type=text] {
   font-size: 0.7em;
 }
 
-
 .content-section {
   margin-top: 0.625em;
-}
-
-.mission {
-    // font-size: 0.938em;
-    // padding-left: 0.875em;
-    // padding-bottom: 0.375em;
-    // position: relative;
-    // top: 6.313em;
-    font-family: 'century gothic';
-    color: #e67e22;
 }
 
 .row {
@@ -225,29 +167,7 @@ input[type=text] {
   margin-left: 0px;
 }
 
-.navbar-brand {
-    display: inline-block;
-    position: relative;
-    top: 0.188em;
-    padding-bottom: .25rem;
-    margin-right: 1rem;
-    font-size: 1.750em;
-    line-height: inherit;
-    white-space: nowrap;
-}
-
 .content-section .fa-book {
-  font-size: 2.375em;
-  color: #F97F51;
-}
-
-
-.content-section .fa-space-shuttle {
-  font-size: 2.375em;
-  color: #F97F51;
-}
-
-.content-section .fa-comments {
   font-size: 2.375em;
   color: #F97F51;
 }
@@ -276,204 +196,6 @@ input[type=text] {
     z-index: 1;
 }
 
-.course-item {
-  border: 0.063em lightgrey solid;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 930px) and (min-width: 401px) {
-  
-  .course-item h2 {
-    order: 1;
-  }
-  
-  .course-item {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .course-item .description {
-    order: 2;
-    width: 20%;
-  }
-}
-
-.course-item .description {
-  margin: 0;
-}
-
-.course-img, .img-fluid {
-  order: 1;
-  width: 13.125em;
-  height: 7.375em;
-  float: left;
-  margin: 0 auto;
-  margin-bottom: 1.250em;
-}
-
-.course-item .description {
-  order: 2;
-}
-
-.course-title {
-  clear: both;
-}
-
-
-.course-info {
-  float: right;
-  border: 0.031em solid #95a5a6;
-  padding: 0.625em;
-  margin-top: -18.562rem;
-  position: relative;
-  right: 6.063em;
-  width: 23%;
-  min-width: 282px;
-  height: 27.188em;
-  background: #fff;
-}
-
-.booyah-box .course-info img {
-  width: 18.010em;
-  height: 13.507em;
-}
-
-.stripe-button-el {
-  width: 400%;
-  height: 2.500em;
-}
-
-.synopsis {
-  width: 100%;
-  height: auto;
-  padding: 3.125em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  background: #29303B;
-  color: #fff;
-}
-
-.synopsis h1 {
-  font-size: 2.375em;
-  margin-bottom: 0.625em;
-  margin-top: 1.000em;
-  margin-left: 3.145em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  width: 51%;
-}
-
-.description p {
-  width: 54%;
-  line-height: 1.7;
-  font-size: 1.188em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  background: #29303B;
-  margin-left: 6.250em;
-}
-
-.description span {
-  font-size: 0.875em;
-}
-
-.course-info img {
-  border-style: none;
-  width: 106.5%;
-  position: relative;
-  top: -0.563em;
-  right: 0.563em;
-  bottom: 0.625em;
-}
-
-.lesson-title {
-  border: 1px solid lightgrey;
-  width: 100%;
-  height: 2.500em;
-  margin-top: 0.250em;
-  border-radius: 0.125em;
-
-}
-
-.lesson-title .lesson-link {
-  margin-top: 0.625em;
-  position: relative;
-  top: 0.625em;
-  left: 1.063em;
-  font-size: 0.813em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  color: #f98045;
-}
-
-.ui-accordion { 
-  width: 50%;
-}
-
-.section .ui-accordion {
-  height: 2.500em;
-}
-
-.ui-accordion .ui-accordion-content {
-  padding: 0 !important;
-  height: auto !important;
-  border-top: 0;
-  overflow: auto;
-}
-
-.ui-accordion .ui-accordion-header {
-  display: block;
-  cursor: pointer;
-  position: relative;
-  margin: 0.125em 0 0 0;
-  padding: .5em .5em .5em .7em;
-  background: #57606f;
-  border: none;
-  font-size: 0.8em !important;
-  height: 2.813em;
-  color: #fff;
-}
-
-.curriculum {
-  margin-left: 12.188em;
-}
-
-.curriculum h2 {
-  margin: 2.500em 0 0.500em 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  color: #404040;
-  font-size: 1.250em;
-}
-
-.stripe-button-el {
-  width: 9.375em;
-}
-
-.action-btn {
-  width: 100%;
-}
-
-.section-title {
-  margin-top: 0.313em;
-  padding-top: 1.000em !important;
-  color: #fff;
-}
-
-
-.admin-btn {
-  float: left; 
-}
-
-
-.stripe-button {
-  float: left;
-  position: relative;
-  top: 10px;
-}
-
 .dashboard-link {
   position: relative;
   top: 0.563em;
@@ -488,7 +210,6 @@ input[type=text] {
   
 }
 
-
 .fa-play-circle {
   margin-bottom: 0;
   width: 0%;
@@ -497,147 +218,3 @@ input[type=text] {
   left: 0.250em;
   padding-right: 0.438em;
 }
-
-input[type=text], select {
-  // width: 50%;
-  // height: 1.500em;
-  // position: relative;
-  // right: 31.250em;
-  // border-radius: 0.375em;
-  // background: #fff;
-  // border: 0.063em solid #ccc;
-}
-
-@media (max-width: 887px) {
-  
-  .cost-sec {
-    margin-top: 25px;
-    margin-right: 25px;
-  }
-  
-//   .btn-primary {
-//     color: #fff;
-//     background-color: #0275d8;
-//     border-color: #0275d8;
-//     position: relative;
-//     right: 414px;
-//     top: 145px;
-//     width: 120px;
-//     height: 28px;
-// }
-  
-  // .search-form {
-  //   padding-top: 10%;
-  //   padding-left: 26%;
-  //   position: relative;
-  //   left: 3%;
-  // }
-  
-  
-  // .search-form input[type=text], select {
-  //   min-width: 250px;
-  // }
-  
-}
-
-@media (max-width: 400px) {
-  .course-description .course-img {
-    margin-left: 10%;
-  }
-}
-
-/*=============================*/
-nav {
-  background: #fff;
-  width: 100%;
-  height: auto;
-  box-shadow: 1px 1px 1px -1px;
-}
-
-.logo {
-  display: inline-block;
-  padding: 25px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.logo .m-logo {
-  font-size: 25px;
-  text-decoration: none;
-  color: #f39c12;
-}
-
-.logo .all-courses {
-  margin-left: 30px;
-  font-size: 12px;
-  position: relative;
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: 500;
-  top: -4px;
-}
-
-.main-nav-links {
-  width: 90%;
-  display: inline;
-}
-
-.main-nav-links ul {
-  padding: 25px;
-  float: right;
-  margin: 0;
-}
-
-.main-nav-links, .main-nav-links ul {
-  display: inline;
-}
-
-.main-nav-links ul li {
-  display: inline-block;
-}
-
-.signin, .signup {
-  padding-right: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  position: relative;
-  top: 8px;
-  color: #2c3e50;
-}
-
-
-input[type=text] {
-  position: relative;
-  top: 160px;
-  display: block;
-  padding-left: 0.813em;
-  font-family: "Helvetica Neue", Helvetica;
-  font-size: 1.125em;
-  color: #576574;
-  margin: 0 auto;
-}
-
-input[type=text], select {
-  width: 50%;
-  height: 2.5em;
-  border-radius: 0.375em;
-  background: #fff;
-  border: 0.001em solid #fff;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
-
-// .btn-primary {
-//     color: #fff;
-//     background-color: #0275d8;
-//     border-color: #0275d8;
-//     position: relative;
-//     right: 414px;
-//     top: 145px;
-//     width: 120px;
-//     height: 28px;
-// }
