@@ -1,6 +1,7 @@
 <h1>Learn something today</h1>
-
+<div class='bg-course-items'>
 <div class='select-course-content'>
+  
   <% @courses.each do |course| %>
     <div class='course-item'>
       <h2><%= link_to course.title, course_path(course), class: 'course-title' %></h2>
@@ -11,14 +12,21 @@
                 <%= image_tag course.image, class: 'course-img' %>
             <% end %>
             <div class="course-description">
-              <!-- description -->
-              <p><%= course.description %></p>
-            <div class="cost-sec">
-                <%= link_to 'More Details...', course_path(course), class: 'more-details btn btn-primary btn-large' %>
-                <br>
-                <b><%= course.cost %></b>
+                <!-- description -->
+                <p><%= course.description %></p>
             </div>
-          </div>
+            <div class="cost-sec">
+                <%= link_to 'More Details', course_path(course), class: 'more-details btn btn-primary btn-large' %>
+            </div>
+            <div class='cost'>
+              <% if course.free? %>
+                <b>Free</b>
+              <% else %>
+                <b>$<%= course.cost.to_i %></b>
+              <% end %>
+            </div>
       </div>
+    
   <% end %>
+  </div>
 </div>

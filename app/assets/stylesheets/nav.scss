@@ -1,3 +1,5 @@
+$move-orange: #FF8013;
+
 nav {
   background: #fff;
   width: 100%;
@@ -15,7 +17,7 @@ nav {
 .logo .m-logo {
   font-size: 25px;
   text-decoration: none;
-  color: #f39c12;
+  color: $move-orange;
 }
 
 .logo .all-courses {
@@ -55,7 +57,7 @@ nav {
   }
 }
 
-.signin, .signup {
+.logout, .signin, .signup {
   padding-right: 20px;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -66,7 +68,9 @@ nav {
 
 input[type=text] {
   position: relative;
-  top: 160px;
+  max-width: 550px;
+  min-width: 270px;
+  top: 271px;
   display: block;
   padding-left: 0.813em;
   font-family: "Helvetica Neue", Helvetica;
@@ -75,7 +79,7 @@ input[type=text] {
   margin: 0 auto;
 }
 
-input[type=text], select {
+input[type=text], select{
   width: 50%;
   height: 2.5em;
   border-radius: 0.375em;

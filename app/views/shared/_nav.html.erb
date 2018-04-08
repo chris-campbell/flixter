@@ -4,10 +4,16 @@
     <%= link_to 'All Courses', courses_path, class: 'all-courses' %>
   </div>
   <div class='main-nav-links'>
-    <ul>
-      <li><%= link_to 'Sign In', new_user_session_path, class: 'signin' %></li>
-      <li><%= link_to 'Sign Up', new_user_registration_path, class: 'signup' %></li>
-    </ul>
+    <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout' %></li>
+      </ul>
+    <% else %>
+      <ul>
+        <li><%= link_to 'Sign In', new_user_session_path, class: 'signin' %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path, class: 'signup' %></li>
+      </ul>
+    <% end %>
   </div>
   <div class='mobile-nav'>
     <div class='bar'></div>

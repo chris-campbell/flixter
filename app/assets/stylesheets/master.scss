@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 html, body {
@@ -36,7 +37,7 @@ ul .header .fa {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 81vh;
+    height: 85vh;
     position: relative;
     display: block;
 }
@@ -218,3 +219,39 @@ ul .header .fa {
   left: 0.250em;
   padding-right: 0.438em;
 }
+
+/*==================================================*/
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    margin-left: 10px;
+    border-radius: 1px !important;
+}
+
+@media (max-width: 576px) {
+  footer {
+    text-align: center;
+  }
+  
+  .footer-content b {
+    font-size: 20px;
+  }
+}
+
+// .video-box {
+//   margin-top: 70px !important;
+//   margin-bottom: 50px !important;
+// }
+
+// .video-js {
+//   width: 80% !important;
+//   height: 400px !important;
+// }
