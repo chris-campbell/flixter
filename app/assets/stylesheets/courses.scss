@@ -10,7 +10,7 @@ $move-bg: #636666;
   height: auto;
   margin: 0 auto;
   min-width: 353.59px;
-  max-width: 398.39px;
+  max-width: 400.39px;
   margin-top: 2px;
   background: white;
   padding: 16px;
@@ -61,10 +61,17 @@ $move-bg: #636666;
 
 .cost-sec {
   margin-left: 27%;
+  .btn {
+    border-radius: 25px;
+    font-size: 13px;
+  }
 }
 
+
+
 .cost {
-  margin-left: 45%;
+  margin-left: 42%;
+  font-weight: 100;
 }
 
 .lesson-vid {
