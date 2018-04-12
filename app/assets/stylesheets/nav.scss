@@ -66,7 +66,8 @@ nav {
   color: #2c3e50;
 }
 
-input[type=text] {
+
+.hero input[type=text] {
   position: relative;
   max-width: 550px;
   min-width: 270px;
@@ -79,7 +80,7 @@ input[type=text] {
   margin: 0 auto;
 }
 
-input[type=text], select{
+.hero input[type=text], select{
   width: 50%;
   height: 2.5em;
   border-radius: 0.375em;

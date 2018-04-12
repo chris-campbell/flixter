@@ -21,13 +21,8 @@
     <br>
     <div class="row">
       <div class="action-btn">
-        <span class="badge badge-default">
-          <%= number_to_currency @course.cost %>
-        </span>
-  
+        
         <% if current_user && current_user == @course.user %>
-          <br />
-          <br />
           <%= link_to 'Administer', instructor_course_path(@course), class: 'admin-btn btn btn-danger btn-large' %>
         <% end %>
         
@@ -53,9 +48,7 @@
       <h3 class="badge badge-info"><%= link_to 'Sign In to Enroll!', new_user_session_path %></h3>
     <% end %>    
       </div>
-      <br>
-      <br>
-      <br>
+      
     </div>
   </div>
   <!-- Course info end -->

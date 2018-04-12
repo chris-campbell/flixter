@@ -112,6 +112,7 @@ ul .header .fa {
   margin: 0;
 }
 
+
 ul .header {
   font-size: 1.563em;
 }
@@ -246,12 +247,12 @@ ul .header .fa {
   }
 }
 
-// .video-box {
-//   margin-top: 70px !important;
-//   margin-bottom: 50px !important;
-// }
 
-// .video-js {
-//   width: 80% !important;
-//   height: 400px !important;
-// }
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+  position: relative;
+  top: 87px;
+  border-radius: 0;
+}

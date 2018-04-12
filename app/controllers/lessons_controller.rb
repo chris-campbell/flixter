@@ -12,8 +12,8 @@ class LessonsController < ApplicationController
         if current_user.enrolled_in?(current_course)
           render :show
         else
-          redirect_to course_path(current_course), alert: "Your not enrolled in this course yet.
-                                                           Click Enroll below to see lessons"
+          redirect_to course_path(current_course), alert: "You're not enrolled in this course yet.
+                                                           Enroll to see course content."
         end
       end
 
