@@ -2,6 +2,7 @@ class Course < ApplicationRecord
     belongs_to :user
     has_many :sections
     has_many :enrollments
+    has_one :rating
     
     validates :title, presence: true
     validates :description, presence: true
