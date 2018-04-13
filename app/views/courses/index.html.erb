@@ -7,17 +7,21 @@
       <div class='course-item'>
         <h2><%= link_to course.title, course_path(course), class: 'course-title' %></h2>
               <!-- images -->
-              <% if course.image.nil? || course.image.empty? %>
+              <% if course.image.nil? %>
                   <%= image_tag 'default.png', class: 'course-img' %>
                 <% else %>
                   <%= image_tag course.image, class: 'course-img' %>
               <% end %>
+              
+              <!-- Description -->
               <div class="course-description">
                   <p><%= course.description %></p>
               </div>
+              
               <div class="cost-sec">
                   <%= link_to 'More Details', course_path(course), class: 'more-details btn btn-primary btn-large' %>
               </div>
+              
               <!-- course price -->
               <div class='cost'>
                 <% if course.free? %>

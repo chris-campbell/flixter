@@ -1,6 +1,12 @@
+require 'carrierwave/orm/activerecord'
 
 CarrierWave.configure do |config|
-   config.storage    = :aws
+  
+  # config.permissions = 0666
+  # config.directory_permissions = 0777
+  # config.storage = :file
+  
+  config.storage    = :aws
   config.aws_bucket = ENV["AWS_BUCKET"]
   config.aws_acl    = "public-read"
 

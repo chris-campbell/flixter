@@ -1,8 +1,11 @@
 class Course < ApplicationRecord
+    mount_uploader :image, ImageUploader
     belongs_to :user
+    has_one :rating
     has_many :sections
     has_many :enrollments
-    has_one :rating
+    
+    
     
     validates :title, presence: true
     validates :description, presence: true
