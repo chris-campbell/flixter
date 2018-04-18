@@ -30,9 +30,6 @@ $move-bg: #e8e8e8;
   }
 }
 
-
-
-
 .course-item {
   width: 80%;
   height: auto;
@@ -65,8 +62,9 @@ $move-bg: #e8e8e8;
 
 .course-img {
   max-width: 400px;
+
   width: 25%;
-  height: auto;
+  height: 110px;
   float: left;
 }
 
@@ -78,7 +76,7 @@ $move-bg: #e8e8e8;
   text-align: left;
   width: 75%;
   p {
-    display: inline;
+    display: inline-block;
     position: relative;
     top: -4px;
     font-size: 0.813em;
