@@ -224,17 +224,20 @@ ul .header .fa {
 /*==================================================*/
 
 .badge {
-    display: inline-block;
-    padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: bold;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    margin-left: 10px;
-    border-radius: 1px !important;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  margin-left: 10px;
+  border-radius: 1px !important;
+  position: relative;
+  top: 0px;
+  right: 0px;
 }
 
 @media (max-width: 576px) {
