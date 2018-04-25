@@ -18,35 +18,25 @@
     <% else %>
         <%= image_tag 'default.png', class: 'course-img' %>
     <% end %>
-
-
-
-
-
-
-
-
-
-
-
-      
-      
-      
-      
-      
-      
       
       <% if current_user && current_user == @course.user %>
         <div class="admin-btn">
-          <%= link_to 'Administrator', instructor_course_path(@course), class: 'admin-btn btn btn-danger btn-large' %>
+          <%= link_to 'Administrator', instructor_course_path(@course), class: 'admin-btn-text btn btn-danger btn-large' %>
         </div>
         <% elsif current_user.enrolled_in?(@course) %>
           <h3 class="badge badge-info">You Are Enrolled!</h3>
           <!-- Course information goes here -->
         <% elsif current_user && @course.free? %>
-            <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+          <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enroll btn btn-primary', method: :post %>
+          <span class='money-back'>30 Day Money-Back Guarantee</span>
+          <h3>Includes: </h3>
+            <ul class='includes'>
+              <li>34.5 hours on-demand video</li>
+              <li>Full lifetime access</li>
+              <li>Certificate of Completion</li>
+            </ul>
         <% elsif current_user && @course.premium? %>
-            <p>$<%= @course.cost %></p>
+            <p>$<%= @course.cost.to_i %></p>
             <%= form_tag course_enrollments_path(@course) do %>
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -56,11 +46,17 @@
                 data-locale="auto">
               </script>
             <% end %>
-          <% else %>
+          <% elsif %>
+          <span class='money-back'>30 Day Money-Back Guarantee</span>
+          <h3>Includes: </h3>
+            <ul class='includes'>
+              <li>34.5 hours on-demand video</li>
+              <li>Full lifetime access</li>
+              <li>Certificate of Completion</li>
+            </ul>
           <h3 class="badge badge-info"><%= link_to 'Sign In to Enroll!', new_user_session_path %></h3>
         <% end %>    
-
-
+    </div>
   </div>
   <!-- Course info end -->
   
@@ -73,7 +69,8 @@
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <div class='lesson-title'>
               <i class="fa fa-play-circle"></i>
-              <%= link_to lesson.title, lesson_path(lesson), class: 'lesson-link' %>
+              <%= link_to lesson.title, lesson_path(lesson), class: 'lesson-link' %> 
+              <p class='duration'><%= lesson.duration(lesson.video) %></p>
             </div>
           <% end %>
         </div>

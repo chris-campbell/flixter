@@ -13,4 +13,13 @@ class Lesson < ApplicationRecord
       end
       return lesson
     end
+    
+    def duration(video)
+      time = Videotime.get_video_time(video)
+      return "#{time / 60}:#{time % 60}"
+    end
+    
+    def duration_total(course)
+    
+    end
 end

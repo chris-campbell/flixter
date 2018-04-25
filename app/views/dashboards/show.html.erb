@@ -5,14 +5,14 @@
   <% current_user.enrolled_courses.each do |course| %>
     <h3><%= link_to course.title, course_path(course) %></h3>
     <br />
-    <% if course.image.present? %>
-        <%= image_tag course.image, class: 'course-img' %>
-    <% else %>
-        <%= image_tag 'default.png', class: 'course-img' %>
-    <% end %>
-    <br />
+  
     <div class="row">
-      <div class="col-12 col-sm-8">
+      <% if course.image.present? %>
+          <%= image_tag course.image, class: 'course-img' %>
+      <% else %>
+          <%= image_tag 'default.png', class: 'course-img' %>
+      <% end %>
+        <div class="col-12 col-sm-8">
         <%= course.description %>
       </div>
       <div class="col-12 col-sm-4 text-center">

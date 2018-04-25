@@ -52,6 +52,7 @@ gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'tether-rails'
 gem "font-awesome-rails"
+gem 'videotime'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

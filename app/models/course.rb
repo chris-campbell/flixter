@@ -21,6 +21,6 @@ class Course < ApplicationRecord
     end
     
     def self.search(term)
-      where("title LIKE ? OR description LIKE ?", "%#{term}%", "%#{term}%")
+      where("title iLIKE ? OR description LIKE ?", "%#{term}%", "%#{term}%")
     end
 end
