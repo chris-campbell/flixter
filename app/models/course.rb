@@ -18,6 +18,7 @@ class Course < ApplicationRecord
     
     def premium?
       !free?
+      
     end
     
     def self.search(term)
