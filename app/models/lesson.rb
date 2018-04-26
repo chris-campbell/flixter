@@ -15,11 +15,8 @@ class Lesson < ApplicationRecord
     end
     
     def duration(video)
-      time = Videotime.get_video_time(video)
-      return "#{time / 60}:""#{time % 60}"
+      time = Videotime.get_video_time(video.path)
+      return "#{ time / 60 }" + ":" + "#{ time % 60 }"
     end
-    
-    def duration_format(time)
-      
-    end
+
 end
