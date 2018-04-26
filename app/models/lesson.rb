@@ -19,7 +19,7 @@ class Lesson < ApplicationRecord
       return "#{time / 60}:#{time % 60}"
     end
     
-    def duration_total(course)
-    
+    def duration_format(time)
+      
     end
 end
