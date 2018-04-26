@@ -1,5 +1,3 @@
-require 'carrierwave/orm/activerecord'
-
 CarrierWave.configure do |config|
   
   # config.permissions = 0666
