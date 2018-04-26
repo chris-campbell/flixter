@@ -7,7 +7,7 @@ $move-bg: #e8e8e8;
 }
 
 .course-heading {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   min-width: 353.59px;
@@ -126,6 +126,10 @@ $move-bg: #e8e8e8;
     h2 {
       text-align: center;
     }
+  }
+  
+  .course-heading {
+    box-shadow: none;
   }
     
     .course-img {

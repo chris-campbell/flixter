@@ -211,9 +211,13 @@
 }
 
 .stripe-button-el, .stripe-button-el span {
+  position: relative !important;
   width: 97%;
-  height: 40px !important;
+  height: 71px !important;
   padding: 0 !important;
+  padding-top: 13px !important;
+  left: 3% !important;
+  top: 40px !important;
   
 }
 

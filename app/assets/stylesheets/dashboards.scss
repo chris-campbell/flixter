@@ -1,3 +1,32 @@
-// Place all the styles related to the dashboards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.dash-btn {
+  position: relative;
+  right: 30px;
+}
+
+.learn {
+  font-size: 21px;
+  position: relative;
+  top: -13px;
+  left: 21%;
+  color: #5d5d5d;
+}
+
+.course-item h3 a {
+  color: #ff8100;;
+  font-size: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  bottom: 10px;
+}
+
+.select-dash-teach {
+  position: relative;
+  top: 100px;
+  margin-bottom: 79px;
+}
+
+.select-dash-enroll {
+  margin-bottom: 0;
+  position: relative;
+  top: 100px;
+}

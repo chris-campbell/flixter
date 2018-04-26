@@ -1,50 +1,41 @@
-<br />
-
-<div class="booyah-box col-5 offset-1">
-  <h1>What I'm Learning</h1>
+<div class="select-course-content select-dash-enroll">
+  <h2 class='learn'>What I'm Learning</h2>
   <% current_user.enrolled_courses.each do |course| %>
-    <h3><%= link_to course.title, course_path(course) %></h3>
-    <br />
-  
-    <div class="row">
+      <div class='course-item'>
+      <h3><%= link_to course.title, course_path(course) %></h3>
       <% if course.image.present? %>
           <%= image_tag course.image, class: 'course-img' %>
       <% else %>
           <%= image_tag 'default.png', class: 'course-img' %>
       <% end %>
-        <div class="col-12 col-sm-8">
-        <%= course.description %>
+      <div class="course-description">
+        <p><%= course.description %></p>
       </div>
       <div class="col-12 col-sm-4 text-center">
-        <%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-primary' %>
+        <%= link_to "More Info...", course_path(course), class: 'dash-btn btn btn-lg btn-primary' %>
       </div>
-    </div>
-    <hr class="col-8 offset-2">
-    <br class="clr" />
+      </div>
   <% end %>
 </div>
-<div class="booyah-box col-5 offset-1">
-  <h1>What I'm Teaching</h1>
+
+<div class="select-course-content select-dash-teach">
+  <h2 class='learn'>What I'm Teaching</h2>
   <% current_user.courses.each do |course| %>
-    <h3 class="text-center">
-      <%= link_to course.title, course_path(course) %>
-    </h3>
-    <br />
-    <% if course.image.present? %>
-        <%= image_tag course.image, class: 'course-img' %>
-    <% else %>
-        <%= image_tag 'default.png', class: 'course-img' %>
-    <% end %>
-    <br />
-    <div class="row">
-      <div class="col-12 col-sm-8">
-        <%= course.description %>
+      <div class='course-item'>
+      <h3><%= link_to course.title, course_path(course) %></h3>
+      <% if course.image.present? %>
+          <%= image_tag course.image, class: 'course-img' %>
+      <% else %>
+          <%= image_tag 'default.png', class: 'course-img' %>
+      <% end %>
+      <div class="course-description">
+        <p><%= course.description %></p>
       </div>
       <div class="col-12 col-sm-4 text-center">
-        <%= link_to "More Info...", course_path(course), class: 'btn btn-lg btn-primary' %>
+        <%= link_to "More Info...", course_path(course), class: 'dash-btn btn btn-lg btn-primary' %>
       </div>
-    </div>
-    <hr class="col-8 offset-2">
-    <br class="clr" />
+      </div>
   <% end %>
 </div>
+
+

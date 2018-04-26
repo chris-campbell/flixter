@@ -37,6 +37,13 @@
             </ul>
         <% elsif current_user && @course.premium? %>
             <p>$<%= @course.cost.to_i %></p>
+            <span class='money-back'>30 Day Money-Back Guarantee</span>
+            <h3>Includes: </h3>
+            <ul class='includes'>
+              <li>34.5 hours on-demand video</li>
+              <li>Full lifetime access</li>
+              <li>Certificate of Completion</li>
+            </ul>
             <%= form_tag course_enrollments_path(@course) do %>
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -46,14 +53,7 @@
                 data-locale="auto">
               </script>
             <% end %>
-          <% elsif %>
-          <span class='money-back'>30 Day Money-Back Guarantee</span>
-          <h3>Includes: </h3>
-            <ul class='includes'>
-              <li>34.5 hours on-demand video</li>
-              <li>Full lifetime access</li>
-              <li>Certificate of Completion</li>
-            </ul>
+          <% else %>
           <h3 class="badge badge-info"><%= link_to 'Sign In to Enroll!', new_user_session_path %></h3>
         <% end %>    
     </div>
