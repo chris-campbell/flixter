@@ -16,6 +16,7 @@ class Lesson < ApplicationRecord
     
     def duration(video)
       time = Videotime.get_video_time(video.path)
+      debugger
       return "#{ time / 60 }" + ":" + "#{ time % 60 }"
     end
 
