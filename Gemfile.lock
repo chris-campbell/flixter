@@ -230,6 +230,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    streamio-ffmpeg (2.1.0)
+      multi_json (~> 1.8)
     stripe (3.13.0)
       faraday (~> 0.10)
     tether-rails (1.4.0)
@@ -289,6 +291,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets-rails
+  streamio-ffmpeg (~> 2.0)
   stripe
   tether-rails
   turbolinks (~> 5)
