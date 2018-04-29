@@ -4,7 +4,7 @@ AWS_SECRET_KEY: "2dPPqW0Vfgz+EtCvIq27v94dbWNejYDtV0lFA5LZ"
 
 AWS_BUCKET: "studentbox"
 
-AWS_REGION:     "us-east-1"
+AWS_REGION: "us-east-1"
 
 SECRET_KEY: sk_test_y0fLB0XVdHoIehSqSa3VVKL7
 
