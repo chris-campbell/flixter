@@ -42,6 +42,7 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (8.3.0)
       execjs
+    awesome_print (1.8.0)
     aws-partitions (1.80.0)
     aws-sdk-core (3.19.0)
       aws-partitions (~> 1.0)
@@ -260,6 +261,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootstrap (= 4.0.0.alpha6)
   byebug
   carrierwave (~> 1.0)
