@@ -15,7 +15,7 @@ class Lesson < ApplicationRecord
     end
     
     def duration(video)
-      url = "https://s3.amazonaws.com/studentbox/"
+      url = "https://s3.amazonaws.com/"
       movie = FFMPEG::Movie.new( url + video.path)
       duration_sec = movie.duration
       return ("#{ duration_sec}") + ":" + ("#{ duration_sec }".to_i % 60)
