@@ -2,10 +2,10 @@ class VideoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-  include CarrierWave::FFmpeg
+  # include CarrierWave::FFmpeg
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :aws
+  # storage :file
+  storage :aws
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
