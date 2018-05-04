@@ -69,7 +69,7 @@
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <div class='lesson-title'>
               <i class="fa fa-play-circle"></i>
-              <%= link_to lesson.title, lesson_path(lesson), class: 'lesson-link' %> 
+              <%= link_to lesson.title, lesson_url(lesson), class: 'lesson-link' %> 
               <div class='duration'><%= lesson.duration(lesson.video) %></div>
             </div>
           <% end %>

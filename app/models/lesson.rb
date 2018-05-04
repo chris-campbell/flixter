@@ -15,10 +15,10 @@ class Lesson < ApplicationRecord
     end
     
     def duration(video)
-     #
       movie = FFMPEG::Movie.new(video.path)
-      duration_sec = movie.duration
-      return ("#{ duration_sec}") + ":" + ("#{ duration_sec }".to_i % 60)
+      duration_sec = movie.duration.to_i
+      
+      return (duration_sec / 60)
     end
 
 end
